@@ -1,0 +1,28 @@
+/* .tweets{
+    min-width: 548px;
+} */
+.action-area{
+    display: flex;
+    flex-direction: column;
+}
+textarea{
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    resize: vertical; /* Allow vertical resizing */
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+button{
+    align-self: flex-end;
+}
+
+.tweets{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

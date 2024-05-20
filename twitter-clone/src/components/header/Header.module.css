@@ -1,0 +1,29 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    background: #dee2e6;
+  }
+ .username{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+ }
+ .icon{
+    font-size: 20px;
+    background:#f8f9fa;
+    padding: 1rem;
+    border-radius: 50px;
+ }
+ .branding{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-size: 24px;
+ }
+
+ .branding svg {
+    height: 4rem;
+ }

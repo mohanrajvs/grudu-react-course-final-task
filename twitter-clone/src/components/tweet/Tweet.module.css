@@ -1,0 +1,22 @@
+.tweet{
+    display: flex;
+    align-items: start;
+    gap: 20px;
+    justify-content: center;
+    border: 1px solid #898989;
+    padding: 10px;
+    border-radius: 4px;
+}
+.user-logo{
+
+    border: 1px solid #cdc6c6;
+    padding: 8px;
+    border-radius: 20px;
+}
+/* .tweet-content{
+
+} */
+
+h3{
+    margin: 0;
+}
