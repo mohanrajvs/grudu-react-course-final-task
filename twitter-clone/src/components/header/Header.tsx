@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import styles from "./Header.module.css";
 
 const twitter = () => (
@@ -14,6 +15,8 @@ const twitter = () => (
 );
 
 const Header = () => {
+  const navigate = useNavigate();
+
   return (
     <header className={styles.header}>
       <div className={styles.branding}>
@@ -23,6 +26,14 @@ const Header = () => {
       <div className={styles.username}>
         <p>John smith</p>
         <div className={styles.icon}>JS</div>
+        <button
+          onClick={() => {
+            localStorage.removeItem("user");
+            navigate("/login");
+          }}
+        >
+          logout
+        </button>
       </div>
     </header>
   );

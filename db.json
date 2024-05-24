@@ -1,19 +1,24 @@
 {
   "tweets": [
     {
-      "id": "1",
+      "id": "0",
       "author_id": "johnsmith",
       "text": "What are the pros of object-oriented programming?<br><br>Please, explain as if I'm 5."
     },
     {
-      "id": "2",
+      "id": "1",
       "author_id": "carlanotarobot",
       "text": "Why use a debugger when you can fill your code with hundreds of <code>print()</code> statements?"
     },
     {
-      "id": "3",
+      "id": "2",
       "author_id": "ameliawarner",
       "text": "Describe your relationship with JavaScript with one word."
+    },
+    {
+      "id": "3",
+      "author_id": "aaa",
+      "text": "wohoo"
     }
   ],
   "users": [

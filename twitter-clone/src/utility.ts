@@ -45,3 +45,21 @@ export const getTweets = async () => {
     throw new Error("unable fetch users");
   }
 };
+
+export const postTweet = async (tweet: {
+  id: string;
+  author_id: string;
+  text: string;
+}) => {
+  try {
+    await fetch("http://localhost:3001/tweets", {
+      method: "POST",
+      body: JSON.stringify(tweet),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+  } catch (e) {
+    throw new Error("unable fetch users");
+  }
+};

@@ -31,8 +31,10 @@ const Login = () => {
     ) {
       const users = await getUsers();
       const user = users.find((user) => user.id === formData.username);
+      console.log(user);
       if (user && user.password === formData.password) {
         setAuthValidation("authenticated");
+        localStorage.setItem("user", JSON.stringify(user));
         navigate("/");
       } else {
         setAuthValidation("invalid user name or password");

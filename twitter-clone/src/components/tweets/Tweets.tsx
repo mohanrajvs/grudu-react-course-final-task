@@ -2,7 +2,7 @@ import { FormEvent, useEffect, useRef, useState } from "react";
 import Header from "../header/Header";
 import Tweet from "../tweet/Tweet";
 import styles from "./Tweets.module.css";
-import { getTweets } from "../../utility";
+import { getTweets, postTweet } from "../../utility";
 
 export interface ITweet {
   id: string;
@@ -22,12 +22,24 @@ const Tweets = () => {
     fetchTweets();
   }, []);
 
-  const submitHandler = (e: FormEvent) => {
+  const submitHandler = async (e: FormEvent) => {
     e.preventDefault();
     if (textAreaRef.current) {
       const { value } = textAreaRef.current;
       if (value && value.trim().length > 0 && value.trim().length < 141) {
         console.log(value);
+        try {
+          const user = JSON.parse(localStorage.getItem("user")!);
+          await postTweet({
+            id: tweets.length + "",
+            author_id: user.id,
+            text: value,
+          });
+          const updatedTweets = await getTweets();
+          setTweets(updatedTweets);
+        } catch (error) {
+          console.log(error);
+        }
       }
     }
   };
