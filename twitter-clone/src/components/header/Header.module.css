@@ -11,6 +11,11 @@
     align-items: center;
     gap: 10px;
  }
+ @media(max-width: 648px) {
+   .username{
+      flex-direction: column;
+   }
+ }
  .icon{
     font-size: 20px;
     background:#f8f9fa;
