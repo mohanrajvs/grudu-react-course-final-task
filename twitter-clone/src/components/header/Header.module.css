@@ -16,6 +16,7 @@
     background:#f8f9fa;
     padding: 1rem;
     border-radius: 50px;
+    text-transform: uppercase;
  }
  .branding{
     display: flex;

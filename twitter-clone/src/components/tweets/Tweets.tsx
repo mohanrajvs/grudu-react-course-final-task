@@ -17,7 +17,7 @@ const Tweets = () => {
   useEffect(() => {
     const fetchTweets = async () => {
       const tweetsData = await getTweets();
-      setTweets(tweetsData);
+      setTweets(tweetsData.reverse());
     };
     fetchTweets();
   }, []);
@@ -27,7 +27,6 @@ const Tweets = () => {
     if (textAreaRef.current) {
       const { value } = textAreaRef.current;
       if (value && value.trim().length > 0 && value.trim().length < 141) {
-        console.log(value);
         try {
           const user = JSON.parse(localStorage.getItem("user")!);
           await postTweet({
@@ -36,7 +35,7 @@ const Tweets = () => {
             text: value,
           });
           const updatedTweets = await getTweets();
-          setTweets(updatedTweets);
+          setTweets(updatedTweets.reverse());
         } catch (error) {
           console.log(error);
         }

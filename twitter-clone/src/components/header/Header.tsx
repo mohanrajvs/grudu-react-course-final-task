@@ -15,6 +15,13 @@ const twitter = () => (
 );
 
 const Header = () => {
+  const user = JSON.parse(localStorage.getItem("user")!);
+
+  const icon = user.name
+    .split(" ")
+    .map((str: string) => str[0])
+    .join("");
+
   const navigate = useNavigate();
 
   return (
@@ -24,8 +31,8 @@ const Header = () => {
         Another Twiter clone
       </div>
       <div className={styles.username}>
-        <p>John smith</p>
-        <div className={styles.icon}>JS</div>
+        <p style={{ textTransform: "capitalize" }}>{user.name}</p>
+        <div className={styles.icon}>{icon}</div>
         <button
           onClick={() => {
             localStorage.removeItem("user");

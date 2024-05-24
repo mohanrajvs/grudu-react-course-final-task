@@ -8,10 +8,16 @@
     border-radius: 4px;
 }
 .user-logo{
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 1px solid #cdc6c6;
-    padding: 8px;
-    border-radius: 20px;
+    text-align: center;
+     font-size: 18px;
+     padding: 12px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50px;
 }
 /* .tweet-content{
 

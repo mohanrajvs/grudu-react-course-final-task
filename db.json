@@ -2,7 +2,7 @@
   "tweets": [
     {
       "id": "0",
-      "author_id": "johnsmith",
+      "author_id": "john smith",
       "text": "What are the pros of object-oriented programming?<br><br>Please, explain as if I'm 5."
     },
     {
@@ -19,6 +19,36 @@
       "id": "3",
       "author_id": "aaa",
       "text": "wohoo"
+    },
+    {
+      "id": "4",
+      "author_id": "mikey",
+      "text": "takemitchi kun"
+    },
+    {
+      "id": "5",
+      "author_id": "jackey",
+      "text": "huu yeah"
+    },
+    {
+      "id": "6",
+      "author_id": "mike tyson",
+      "text": "ooo yeah"
+    },
+    {
+      "id": "7",
+      "author_id": "mike tyson",
+      "text": "ko"
+    },
+    {
+      "id": "8",
+      "author_id": "mike tyson",
+      "text": "ko ko"
+    },
+    {
+      "id": "9",
+      "author_id": "mike tyson",
+      "text": "<strong>i am strong</strong>"
     }
   ],
   "users": [
@@ -27,6 +57,24 @@
       "name": "fsd",
       "email": "a@gamil.com",
       "password": "Test@123"
+    },
+    {
+      "id": "mikey",
+      "name": "manjrio sano",
+      "email": "mikey@gamil.com",
+      "password": "Test@123"
+    },
+    {
+      "id": "jackey",
+      "name": "jackey chan",
+      "email": "j@gamil.com",
+      "password": "Jackey@123"
+    },
+    {
+      "id": "mike tyson",
+      "name": "mike tyson",
+      "email": "mike@gmail.com",
+      "password": "Mike@123"
     }
   ]
 }
