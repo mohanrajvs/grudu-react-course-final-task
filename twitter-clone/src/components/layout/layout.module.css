@@ -3,4 +3,17 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
+  padding: 0 3rem;
+}
+
+.layout section {
+    width: 100%; 
+    max-width: 548px; 
+ 
+}
+
+@media (min-width: 768px) {
+  .layout {
+    padding: 0 20px;
+  }
 }

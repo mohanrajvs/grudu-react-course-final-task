@@ -1,15 +1,13 @@
+import { ITweet } from "../tweets/Tweets";
 import styles from "./Tweet.module.css";
 
-const Tweet = () => {
+const Tweet = ({ tweet }: { tweet: ITweet }) => {
   return (
     <div className={styles.tweet}>
       <div className={styles["user-logo"]}>JS</div>
       <div className={styles["tweet-content"]}>
-        <h3>Jhon smith</h3>
-        <p>
-          what is object oriented progemming language please explanin as if i'm
-          5.
-        </p>
+        <h3>{tweet.author_id}</h3>
+        <div dangerouslySetInnerHTML={{ __html: tweet.text }} />
       </div>
     </div>
   );

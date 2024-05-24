@@ -1,11 +1,23 @@
-/* .tweets{
-    min-width: 548px;
-} */
-.action-area{
+
+main{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+   
 }
-textarea{
+section{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem auto;
+    gap: 10px;
+    width: 100%; 
+    max-width: 548px; 
+
+}
+
+.textarea{
     width: 100%;
     padding: 10px;
     font-size: 16px;
@@ -14,15 +26,15 @@ textarea{
     border-radius: 4px;
     background-color: #f9f9f9;
     box-sizing: border-box;
-    resize: vertical; /* Allow vertical resizing */
+    resize: vertical; 
     transition: border-color 0.3s, box-shadow 0.3s;
 }
-button{
-    align-self: flex-end;
-}
-
 .tweets{
     display: flex;
     flex-direction: column;
     gap: 10px;
+}  
+button{
+    float: right;
 }
+
