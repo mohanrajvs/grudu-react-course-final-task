@@ -31,7 +31,6 @@ const Login = () => {
     ) {
       const users = await getUsers();
       const user = users.find((user) => user.id === formData.username);
-      console.log(user);
       if (user) {
         try {
           const passwordMatch = await verifyPassword(
