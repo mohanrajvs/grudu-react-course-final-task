@@ -34,6 +34,7 @@ const Tweets = () => {
             author_id: user.id,
             text: value,
           });
+          textAreaRef.current.value = "";
           const updatedTweets = await getTweets();
           setTweets(updatedTweets.reverse());
         } catch (error) {

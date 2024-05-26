@@ -3,7 +3,7 @@ import Card from "../Card/Card";
 import styles from "./Login.module.css";
 import Layout from "../layout/layout";
 import { ChangeEvent, FormEvent, useState } from "react";
-import { getUsers } from "../../utility";
+import { getUsers, verifyPassword } from "../../utility";
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -32,10 +32,22 @@ const Login = () => {
       const users = await getUsers();
       const user = users.find((user) => user.id === formData.username);
       console.log(user);
-      if (user && user.password === formData.password) {
-        setAuthValidation("authenticated");
-        localStorage.setItem("user", JSON.stringify(user));
-        navigate("/");
+      if (user) {
+        try {
+          const passwordMatch = await verifyPassword(
+            formData.password,
+            user.password
+          );
+          if (passwordMatch) {
+            setAuthValidation("authenticated");
+            localStorage.setItem("user", JSON.stringify(user));
+            navigate("/");
+          } else {
+            throw new Error("invalid password");
+          }
+        } catch (e) {
+          setAuthValidation("invalid user name or password");
+        }
       } else {
         setAuthValidation("invalid user name or password");
       }
